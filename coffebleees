@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #6f4e37;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.social-media {
+    text-align: center;
+    padding: 20px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.instagram {
+    background-color: #e1306c;
+}
+
+.linkedin {
+    background-color: #0077b5;
+}
+
+.social-media a:hover {
+    opacity: 0.8;
+}
+.social-media {
+    text-align: center;
+    padding: 20px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 50%;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    line-height: 40px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.instagram {
+    background-color: #e1306c;
+}
+
+.linkedin {
+    background-color: #0077b5;
+}
+
+.social-media a:hover {
+    opacity: 0.8;
+}
+
+.social-media i {
+    font-size: 20px;
+}
+.map-container {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+    
+
+
+
+/* Menu Items */
+.menu-items {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.menu-items li {
+    margin: 10px;
+}
+
+.menu-box {
+    border: 2px solid #6f4e37;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 150px;/* Adjust width based on your preference */
+}
+
+.menu-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2)
+    ; /* Adjust width based on your preference */
+}
+
+.menu-box img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.menu-box a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.menu-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+#menu{
+    background: url(menu.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    opacity: 0.75;
+    
+    
+}
+
+
+header{
+    background: url(header.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    opacity: 0.75;
+
+}
+#home{
+    background: url(home.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    opacity: 0.75;
+}
+#about{
+    background: url(about.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    opacity: 0.75;
+}
+#contact{
+    background: url(contact.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    opacity: 0.75;
+}
+/* Search Bar Styles */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.search-container input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-container button {
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-left: 5px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background: #ccc;
+}
+h1{
+    font-size: 48px;
+    color: #1443b2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+h2{
+    font-size: 38px;
+    color: #ff0000;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+p{
+    font-size: 24px;
+    color: #090908;
+    text-align: justify;
+    
+}
+span{
+    font-size: 24px;
+    color: #1212eb;
+    text-align: center;
+    font-weight: 700;
+}
+.foot{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+nav ul li a:hover{
+    color: #ff0000;
+    font-weight: 800;
+    transition: 0.2s;
+}
+
+</style>
+    
+</head>
+<body>
+    
+    <header>
+        <h1>Welcome to Coffee Bliss</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="search-container">
+                <form action="#">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Freshly Brewed Coffee</h2>
+        <p>Welcome to <span>coffeebliss</span>]
+
+            Nestled in the heart of Peradeniya,<span>coffeebliss</span>  is more than just a place to grab your morning brew—it's a cozy retreat where the aroma of freshly roasted coffee beans fills the air, and the warmth of community comes to life.
+            
+            Our shop is a haven for coffee lovers, offering a carefully curated selection of single-origin beans and specialty blends, roasted to perfection and brewed just the way you like it. Whether you're in the mood for a bold espresso, a velvety cappuccino, or a smooth pour-over, our skilled baristas craft each cup with passion and precision.
+            
+            At <span>coffeebliss</span>, we believe in more than just great coffee. We pride ourselves on creating an inviting atmosphere where friends can catch up, students can find their focus, and everyone can take a moment to relax. Our rustic-chic décor, accented with warm woods and soft lighting, offers the perfect backdrop for everything from casual conversations to productive work sessions.
+            
+            Pair your coffee with one of our freshly baked pastries, artisan sandwiches, or healthy snack options—all made with the finest ingredients and a dash of love. Our menu is designed to satisfy every craving, whether you're here for a quick bite or a leisurely meal.
+            
+            Come for the coffee, stay for the community. We can't wait to welcome you to <span>coffeebliss</span>, where every visit feels like coming home..</p>
+    </section>
+
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <ul class="menu-items">
+            <div class="menu-box"><li> <img src="Espresso.jpeg" alt="Espresso" style="width: 100px; height: 100px; "> <a href="#">Espresso</a></li></div>
+            <div class="menu-box"><li><img src="Cappuccino.jpeg" alt="Espresso" style="width: 100px; height: 100px; "> <a href="#">Cappuccino</a></li></div>
+            <div class="menu-box"><li><img src="Latte.jpeg" alt="Espresso" style="width: 100px; height: 100px; "> <a href="#">Latte</a></li></div>
+            <div class="menu-box"><li><img src="Mocha.jpeg" alt="Espresso" style="width: 100px; height: 100px; "> <a href="#">Mocha</a></li></div>
+            <div class="menu-box"><li><img src="Cold Brew.jpeg" alt="Espresso" style="width: 100px; height: 100px; "> <a href="#">Cold Brew</a></li></div>
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At Coffee Bliss, we are passionate about providing our customers with high-quality coffee made from the finest beans.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:info@coffeebliss.com">info@coffeebliss.com</a></p>
+        <p>Phone: 075-245-2869</p>
+        <p>Address: 2/6/c/1,Gannoruwa Road,Peradeniya</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank" class="facebook">Facebook</a>
+            <a href="https://www.twitter.com" target="_blank" class="twitter">Twitter</a>
+            <a href="https://www.instagram.com" target="_blank" class="instagram">Instagram</a>
+            <a href="https://www.linkedin.com" target="_blank" class="linkedin">LinkedIn</a>
+        </div>
+        
+        
+    </section>
+    <section id="location">
+        <h2>Our Location</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31662.241290628797!2d80.5778071!3d7.265841!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae368d9915396f7%3A0x6ffeac30f62d03ec!2sPeradeniya!5e0!3m2!1sen!2slk!4v1723977769800!5m2!1sen!2slk" width="100" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    
+    
+
+    <footer>
+        <p class="foot">&copy; 2024 Coffee Bliss. All rights reserved.</p>
+    </footer>
+</body>
+</html>
